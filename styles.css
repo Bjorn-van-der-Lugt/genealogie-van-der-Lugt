@@ -1,0 +1,296 @@
+:root {
+    
+    /* TYPOGRAPHY */
+
+    --font-size: 16px;
+    --line-height: 1.75rem;
+
+    /* SPACING */
+
+    --max-width: 55rem;
+    --margin-vertical: 1rem;
+    --margin-horizontal: 1rem;
+    --padding-horizontal: 1rem;
+    --padding-vertical: 1rem;
+    --border-radius: 6px;
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!! DARK MODE !!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+    
+    /* FONT COLORS */
+
+    --color: #222222;
+    --color-heading: ;
+
+    --color-II: ;
+    --color-heading-II: ;
+
+    --color-III: ;
+    --color-heading-III: ;
+
+    /* BACKGROUND COLORS */
+
+    --background-color: #FAFAF8;
+    --background-color-II: #b8a799;
+    --background-color-III: ;
+
+    /* INTERACTIVE */
+    
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    --border: ;
+
+    /* BUTTONS */
+
+    --button-color: #FFFFFF;
+    --button-color-hover: #FFFFFF;
+    --button-color-focus: #FFFFFF;
+    --button-color-disabled: ;
+
+    --button-bg: #2A6F97;
+    --button-bg-hover: #084D75;
+    --button-bg-focus: ;
+    --button-bg-disabled: ;
+
+    /* LINKS */
+
+    --link-color: #2A6F97;
+    --link-color-hover: #074D75;
+    --link-color-focus: #074D75;;
+    --link-color-visited: ;
+
+    --link-bg-focus: ;
+
+    --link-color-II: ;
+    --link-color-hover-II: ;
+    --link-color-focus-II: ;
+    --link-color-visited-II: ;
+
+    --link-bg-focus-II: ;
+    
+    --link-color-III: ;
+    --link-color-hover-III: ;
+    --link-color-focus-III: ;
+    --link-color-visited-III: ;
+
+    --link-bg-focus-III: ;
+
+    /* INPUT */
+
+    --input-color: ;
+    --input-color-focus: ;
+    --input-color-invalid: ;
+    --input-color-error-message: ;
+    --input-color-error-message-focus: ;
+
+    --input-bg: ;
+    --input-bg-focus: ;
+
+    /* OUTLINES */
+
+    --outline-button-focus: ;
+    --outline-link-focus: ;
+    --outline-input-focus: ;
+    --outline-input-invalid: ;   
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, li {
+    margin: calc( var(--margin-vertical) * 2) 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 1.875rem;
+    line-height: 1.3;
+}
+
+h3 {
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
+
+h4 {
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+h5 {
+    font-size: 1.125rem;
+    line-height: 1.5;
+}
+
+h6 {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: var(--font-size);
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--color);
+    line-height: var(--line-height);
+    font-family: 'Lora', serif;
+}
+
+main {
+    position: relative;
+    top: 2rem;
+    width: var(--max-width);
+    margin: 0 auto;
+}
+
+section {
+    margin: calc( var(--margin-vertical) * 4 ) 0;
+    scroll-margin: calc( var(--margin-vertical) * 8 );
+}
+
+header, footer {
+    background-color: var(--background-color-II);
+    color: var(--color);
+}
+
+ul { list-style: none; } 
+
+a { text-decoration: none; }
+
+button, a { 
+    -webkit-tap-highlight-color: transparent; 
+    cursor: pointer; 
+    white-space: nowrap; 
+} 
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!! LANDING !!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.landing {
+    background-image: url('background.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh; width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: calc( var(--margin-vertical) * 4 );
+}
+
+.landing h1 {
+    color: white;
+    display: block;
+    text-shadow: 
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+}
+
+.landing .cta {
+    background-color: var(--button-bg);
+    color: var(--button-color);
+    font-size: 1.75rem;
+    border-radius: var(--border-radius);
+    padding: calc( var(--padding-vertical) * 1.5 ) calc( var(--padding-horizontal) * 1.5 );
+}
+
+.landing .cta:hover {
+    box-shadow: var(--box-shadow);
+    background-color: var(--button-bg-hover);
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!! HEADER !!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    box-shadow: var(--box-shadow);
+}
+
+.header .ul {
+    display: flex;
+    justify-content: space-between;
+    width: calc( var(--max-width) + 2rem );
+    margin: 0 auto;
+}
+
+.header .u-a {
+    font-size: 1.125rem;
+    color: inherit;
+    margin: 0;
+    padding: var(--padding-vertical) var(--padding-horizontal);
+    border-radius: var(--border-radius);
+}
+
+.header i {
+    margin-left: calc( var(--margin-horizontal) / 4 );
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!! TAKKEN !!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.takken .u-a {
+    font-size: 1.25rem;
+}
+
+.takken i {
+    margin-left: calc( var(--margin-horizontal) / 3 );
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!! CONTACT !!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+.contact .button {
+    display: block;
+    background-color: var(--button-bg);
+    font-size: 2.5rem;
+    color: #FFFFFF;
+    margin: var(--margin-vertical) var(--margin-horizontal);
+    border: none;
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!! ARTIKELEN !!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.artikelen .list i {
+    margin-right: calc( var(--margin-horizontal) / 2 );
+}
+
+@media (max-width: 1366px) {
+    button, a {
+        padding: calc( var(--padding-vertical) / 2 ) 0; /* Ensures touch targets */
+    }
+}
