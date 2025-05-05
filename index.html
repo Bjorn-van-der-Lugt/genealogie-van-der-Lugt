@@ -61,6 +61,7 @@
         <script src="https://kit.fontawesome.com/e4ca2860c2.js" crossorigin="anonymous"></script>
     </head>
     <body>
+        <button id="menu-toggle" class="menu-toggle"><i class="fa-duotone fa-solid fa-bars"></i></button>
         <header class="header">
             <nav class="nav">
                 <ul class="ul">
@@ -89,10 +90,14 @@
 
         <section class="landing">
             <h1 class="heading">Genealogie van der Lugt - van der Lee</h1>
-            <a href="#takken" class="cta">Bekijk Stamboom <i class="fa-duotone fa-solid fa-family"></i></a>
+            <a href="#takken" class="cta" aria-label="Scroll omlaag"><i class="fa-solid fa-down" aria-hidden="true"></i></a>
+            <a href="https://www.wiertomta.nl/?p=1675" 
+               class="u-a artikel" 
+               rel="noreferrer noopener" target="_blank"><i class="fa-duotone fa-solid fa-up-right-from-square" area-hidden="true"></i> 1902 Brand te Rotterdam
+            </a>
         </section>
         <main>
-
+            <div class="mobile-wrapper">
 
                 <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
                 <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!! TAKKEN !!!!!!!!!!!!!!!!!!!!!!!!!!! -->
@@ -117,14 +122,14 @@
                         persoon moest zijn eigen map krijgen met daarin alle bestanden die bij deze persoon hoorde. 
                         Vervolgens moesten alle koppelingen met de image gallery's opnieuw gemaakt worden. Een enorm 
                         karwei die uiteindelijk tot een forse besparing aan schijfruimte heeft moegen leiden. Mocht 
-                        u nog iets tegen komen dat niet geheel klopt, laat het mij dan weten via het formulier, 
+                        u nog iets tegen komen dat niet geheel klopt, laat het mij dan weten via <a href="#contact" class="u-a formulier">het formulier</a>, 
                         de link naar het formulier vind u links naast deze tekst.
                         Paul van der Lugt uit Lommel Belgie heeft de naam van der Lugt onderzocht 
                         die zijn roots vind in het Belgische Limburg en is uitgegroeid in Rotterdam en omgeving. Deze tak 
                         is bekend als een rijke tak met hoog opgeleide mensen en door de brand in 1902 waarbij de firma W. 
                         van der Lugt volledig verwoest werd. In de loop der jaren heb ik door complex onderzoek deze tak kunnen 
                         koppelen met de tak vdlugt-wl, deze zijn nu gekoppeld inzichtelijk onder vdlugt-rb-wl. Eerder 
-                        genoemde takken zijn nu verwijderd.Met dank aan Paul van der Lugt en voor de aanvullingen door Ben van der Lugt.
+                        genoemde takken zijn nu verwijderd. Met dank aan Paul van der Lugt en voor de aanvullingen door Ben van der Lugt.
                     </p>
 
                     <a href="https://vdlugt.eu/vdlugt-rb-wl/index.html"
@@ -233,11 +238,11 @@
               </a>
                 </div>
 
-                <!-- vdlugt-nb -->
+                <!-- vdlee-nb -->
 
                 <div class="tak">
 
-                    <h2 class="heading">vdlugt-nb</h2>
+                    <h2 class="heading">vdlee-nb</h2>
 
                  <p class="text">
                     De tak van der Lee die voor een groot deel afkomstig is rondom Herpen NB. 
@@ -258,7 +263,7 @@
 
                     <h2 class="heading">Mijn kwartierstaat</h2>
                      <p class="text">
-                        dit betreft de kwartierstaat van Mark van der Lugt en gaat terug tot in 1290, in 
+                        Dit betreft de kwartierstaat van Mark van der Lugt en gaat terug tot in 1290, in 
                         een kwartierstaat worden alleen de ouders van een persoon opgenomen. Mijn broers en 
                         zussen en de broers en zussen van mijn ouders, grootouders enz. vind je hier niet in terug.
                         <span>Onderzocht door Mark van der Lugt</span>
@@ -281,21 +286,22 @@
             <section class="contact" id="contact">
 
                 <!-- MAIL -->
-
                     <h2>Contact</h2>
-                    <p>Stuur een mail !</p>
+                    <p></p>
 
                 <!-- STUUR EMAIL -->
 
-                <a href="mailto:genea.vdlugt@gmail.com" class="button" title="Stuur een e-mail">
-                    <i class="fa-duotone fa-envelope" area-hidden="true"></i>
+                <a href="mailto:genea.vdlugt@gmail.com" class="u-a" title="Stuur een e-mail">
+                    Stuur een e-mail <i class="fa-duotone fa-envelope" area-hidden="true"></i>
                   </a>
 
                 <!-- KOPIEER EMAIL -->
 
                   <button class="button copy" id="copyEmail" title="Kopieer e-mailadres">
-                    <i class="fa-duotone fa-copy" area-hidden="true"></i> 
+                    Kopieer e-mailadres <i class="fa-duotone fa-copy" area-hidden="true"></i> 
                   </button>
+
+                  <div id="copyToast" class="toast">Gekopieerd!</div>
 
                   <!-- GEGEVENS STUREN -->
 
@@ -306,9 +312,8 @@
                     document of persoon, vul dan svp 
                     <a href="https://form.jotform.com/250855100800041"
                        target="_blank"
-                       class="u-a"
-                       rel="noreferrer noopener">dit formulier
-                    </a> in
+                       class="u-a formulier"
+                       rel="noreferrer noopener">dit formulier</a> in
                 </p>
                   
             </section>
@@ -344,7 +349,9 @@
 
             <section class="doneer" id="doneer">
                 <h2 class="heading">Help ons onderzoeken</h2>
-                <p class="text">Wilt u ons steunen? De kosten voor onderhoud, het draaien van een server, 
+                <p class="text">Wilt u ons steunen? dan kunt u dat doen door middel van
+                    <a href="https://eu.jotform.com/form/250883866984377" class="u-a" target="_blank" rel="noreferrer noopener">deze link</a> te gebruiken die naar een invulformulier gaat. 
+                   De kosten voor onderhoud, het draaien van een server, 
                    de energie en de maandelijkse en jaarlijkse abonnementskosten stijgen fors.
                    Om https://www.vdlugt.eu voor langere tijd in de lucht te kunnen houden 
                    en verder onderzoek te bekostigen kunt u ons helpen deze kosten te drukken. We doen dit 
@@ -358,40 +365,13 @@
                     <li class="list">Telefoonnummer</li>
                     <li class="list">en Iban, deze gegevens worden niet bewaard</li>
                 </ul>
-                <p>Wilt u ons helpen, dan kunt u dat doen door middel van deze 
-                   <a href="https://eu.jotform.com/form/250883866984377" target="_blank" rel="noreferrer noopener">link</a> te gebruiken die naar een invulformulier gaat.
-                   Wij stellen uw gift zeer op prijs.
-                </p>
+
+                <p>Wij stellen uw gift zeer op prijs.</p>
+
+                <p>© 2025 Mark van der Lugt</p>
             </section>
-        </main>
-
-                <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-                <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!! FOOTER !!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-                <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-
-        <footer class="footer">
-            <nav class="nav">
-                <ul class="ul">
-                    <li class="list">
-                        <a href="#home" class="u-a"> Takken</a>
-                    </li>
-                    <li class="list">
-                        <a href="https://vdlugt.eu/kwartierstaat/index.html" class="u-a" rel="noreferrer noopener">Mijn kwartierstaat</a>
-                    </li>
-                    <li class="list">
-                        <a href="#blog" class="u-a">Blog</a></li>
-                    <li class="list">
-                        <a href="#contact" class="u-a">Contact <i class="fa-duotone fa-solid fa-mailbox-flag-up"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://eu.jotform.com/form/250883866984377" 
-                           class="u-a"
-                           target="_blank"
-                           rel="noreferrer noopener">Doneer <i class="fa-duotone fa-solid fa-hand-holding-circle-dollar"></i></a>
-                    </li>
-                </ul>
-            </nav>
-        </footer>
+        </div>
+        </main>      
         <script src="scripts.js"></script>
     </body>
 </html>
