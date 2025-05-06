@@ -284,7 +284,7 @@ button, a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: calc( var(--margin-vertical) * 3 );
+    gap: calc( var(--margin-vertical) * 1 );
 }
 
 @media (max-width: 767px) {
@@ -316,6 +316,12 @@ button, a {
     padding: calc( var(--padding-vertical) * 1 ) calc( var(--padding-horizontal) * 1 );
 }
 
+.landing .heading,
+.landing .cta {
+    position: relative;
+    bottom: 5rem;
+}
+
 .landing .cta:hover {
     box-shadow: var(--box-shadow);
     background-color: #000000;
@@ -329,7 +335,7 @@ button, a {
 
 .landing .u-a.artikel {
     position: absolute;
-    left: 3rem; bottom: 2rem;
+    right: 3rem; bottom: 2rem;
     color: #FFFFFF;
     text-shadow: 
     -1px -1px 0 black,
@@ -364,21 +370,6 @@ button, a {
     transition: transform 0.25s ease;
 }
 
-@media (max-width: 1023px) {
-    .header .ul {
-        width: 100%;
-        justify-content: space-evenly;
-        margin: 0;
-        max-width: var(--max-width);
-    }
-}
-
-@media (max-width: 1023px) and (orientation: landscape) {
-    .header .ul {
-        padding: 0 1.5rem;
-    }
-}
-
 @media (max-width: 767px) and (orientation: portrait) {
     .header {
         height: 100vh;
@@ -403,6 +394,26 @@ button, a {
     margin: 0 auto;
 }
 
+@media (max-width: 1023px) {
+    .header .ul {
+        width: 100%;
+        padding: 0 1.5rem;
+    }
+}
+
+@media (max-width: 1023px) and (orientation: portrait) {
+    .header .list:nth-child(3) {
+        display: none;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .header .list:nth-child(1) {
+        display: none;
+    }
+}
+
 
 @media (max-width: 767px) and (orientation: portrait) {
     .header .ul {
@@ -410,14 +421,14 @@ button, a {
         justify-content: center;
         align-items: flex-start;
         width: 80%; height: 100%;
-        margin: 0 auto;
+        margin: 0 auto; padding: 0;
     }
 }
 
-@media (max-width: 767px) and (orientation: landscape) {
+@media (max-width: 1023px) and (orientation: landscape) {
     .header .ul {
         justify-content: space-between;
-        width: 100%;
+        max-width: var(--max-width);
     }
 
     .header i {
@@ -436,15 +447,7 @@ button, a {
 
 
 @media (max-width: 767px) and (orientation: portrait) {
-    .header .u-a {
-        text-align: left;
-    }
-
     .header .u-a i {
-        display: none;
-    }
-
-    .list:nth-child(2) {
         display: none;
     }
 }
@@ -466,9 +469,21 @@ button, a {
 /* !!!!!!!!!!!!!!!!!!! TAKKEN !!!!!!!!!!!!!!!!!!! */
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
+.takken .mobile-header {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .takken .mobile-header {
+        display: block;
+        font-size: 1.5rem;
+        line-height: 1.5;
+        font-weight: bold;
+    }
+}
+
 .takken .u-a {
     color: var(--link-color);
-    font-size: 1.25rem;
     border-radius: var(--border-radius);
     padding: calc( var(--padding-vertical) / 2 ) calc( var(--padding-horizontal) / 2 ) calc( var(--padding-vertical) / 2 ) 0;
 }
@@ -492,17 +507,12 @@ button, a {
     padding: var(--padding-vertical) 0;
 }
 
-.takken span {
-    font-style: italic;
-}
-
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 /* !!!!!!!!!!!!!!!!!!! CONTACT !!!!!!!!!!!!!!!!!! */
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
-.contact .button,
+
 .contact .u-a {
-    font-size: 1.125rem;
     color: var(--link-color);
     margin: var(--margin-vertical) var(--margin-horizontal) var(--margin-vertical) 0;
     border: none;
@@ -511,29 +521,23 @@ button, a {
     padding: calc( var(--padding-vertical) / 2 ) 0;
 }
 
-.contact .button:hover,
 .contact .u-a:hover {
     color: var(--link-color-hover)
 }
 
-.contact .button:focus-visible,
+
 .contact .u-a:focus-visible {
     color: var(--link-color-focus);
 }
-
-.contact .button i,
-.contact .u-a i {
-    font-size: 1.5rem;
-    color: var(--color);
-    margin-left: calc( var(--margin-horizontal) / 2 );
-}
  
-.contact .button {
-    background-color: transparent;
-}
-
 .contact .formulier {
     margin: 0;
+}
+
+.contact .u-a i {
+    font-size: 1.2rem;
+    color: var(--color);
+    margin-left: calc( var(--margin-horizontal) / 2 );
 }
 
 .toast {
@@ -557,14 +561,14 @@ button, a {
   
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-/* !!!!!!!!!!!!!!!!!!! ARTIKELEN !!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!!! VERHALEN !!!!!!!!!!!!!!!! */
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
-.artikelen .u-a {
+.verhalen .u-a {
     color: var(--link-color);
 }
 
-.artikelen .list i {
+.verhalen .list i {
     margin-right: calc( var(--margin-horizontal) / 2 );
 }
 
@@ -584,4 +588,96 @@ button, a {
 
 .doneer .u-a:focus-visible {
     color: var(--link-color-focus);
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!! FOOTER !!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.footer {
+    background-color: var(--background-color-II);
+    margin-top: calc( var(--margin-vertical) * 2 );
+}
+
+@media (max-width: 1023px) and (orientation: portrait) {
+    .footer {
+        max-width: var(--max-width);
+    };
+}
+
+@media (max-width: 1023px) and (orientation: landscape) {
+    .footer .ul > *:not(:first-child) {
+        display: none;
+    };
+}
+
+@media (max-width: 1023px) and (orientation: portrait) {
+    .footer .ul > *:not(:first-child) {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) and (orientation: portrait) {
+    .footer {
+        display: none;
+    };
+}
+
+.footer .ul {
+    margin: 0; padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: calc( var(--max-width) + 2rem );
+    margin: 0 auto;
+}
+
+@media (max-width: 1023px) {
+    .footer .ul {
+        padding: 0 1.5rem;
+    }
+}
+
+@media (max-width: 767px) and (orientation: portrait) {
+    .footer .ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.footer .u-a {
+    font-size: 1rem;
+    color: inherit;
+    padding: 0 var(--padding-horizontal);
+    border-radius: var(--border-radius);
+}
+
+.footer .u-a:hover {
+    color: #FFFFFF;
+}
+
+.footer .u-a:focus-visible {
+    color: #FFFFFF;
+    outline: var(--outline-link-focus);
+}
+
+.footer i {
+    margin-left: calc( var(--margin-horizontal) / 4 );
+}
+
+.footer .rechten {
+    white-space: nowrap;
+}
+
+@media (max-width: 767px) and (orientation: portrait) {
+    .footer .rechten {
+        white-space: wrap;
+        margin: 0 var(--margin-horizontal);
+        padding-top: var(--padding-horizontal);
+    }
+}
+
+.footer .portfolio {
+    color: var(--link-color);
+    padding: var(--padding-vertical) 0;
 }
