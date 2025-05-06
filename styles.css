@@ -681,3 +681,8 @@ button, a {
     color: var(--link-color);
     padding: var(--padding-vertical) 0;
 }
+
+.oeverstraat03 {
+    width: 100%;
+    border-radius: var(--border-radius);
+}
