@@ -473,6 +473,18 @@ button, a {
     display: none;
 }
 
+.takken img {
+    display: none;
+    width: 100%;
+    margin: var(--margin-vertical) auto;
+}
+
+@media (max-width: 767px) {
+    .takken img {
+        display: block;
+    }
+}
+
 @media (max-width: 767px) {
     .takken .mobile-header {
         display: block;
@@ -540,7 +552,9 @@ button, a {
     margin-left: calc( var(--margin-horizontal) / 2 );
 }
 
-.toast {
+/*
+
+.contact .toast {
     position: absolute;
     background-color: var(--background-color-II);
     color: var(--color);
@@ -554,11 +568,20 @@ button, a {
     z-index: 10;
     box-shadow: var(--box-shadow);
   }
+
   
-  .toast.show {
+  
+ .contact .toast.show {
     opacity: 1;
   }
+
+   */
   
+  .contact img {
+    width: 100%;
+  }
+
+ 
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 /* !!!!!!!!!!!!!!!!!!!! VERHALEN !!!!!!!!!!!!!!!! */
@@ -687,7 +710,3 @@ button, a {
     padding: var(--padding-vertical) 0;
 }
 
-.oeverstraat03 {
-    width: 100%;
-    border-radius: var(--border-radius);
-}
